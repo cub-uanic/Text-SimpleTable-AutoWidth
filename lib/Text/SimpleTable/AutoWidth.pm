@@ -2,7 +2,7 @@ package Text::SimpleTable::AutoWidth;
 
 use Moose;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -229,7 +229,7 @@ sub draw {
 
 =head1 SEE ALSO
 
-L<Text::SimpleTable>, L<Catalyst>
+L<Text::SimpleTable>, L<Moose>, L<Catalyst>
 
 =head1 AUTHOR
 

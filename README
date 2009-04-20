@@ -1,0 +1,93 @@
+NAME
+    Text::SimpleTable::AutoWidth - Simple Eyecandy ASCII Tables with
+    auto-width selection
+
+SYNOPSIS
+        use Text::SimpleTable::AutoWidth;
+
+        my $t1 = Text::SimpleTable::AutoWidth->new();
+        $t1->row( 'foobarbaz', 'yadayadayada' );
+        print $t1->draw;
+
+        .-----------+--------------.
+        | foobarbaz | yadayadayada |
+        '-----------+--------------'
+
+
+        my $t2 = Text::SimpleTable::AutoWidth->new();
+        $t2->captions( 'Foo', 'Bar' );
+        $t2->row( 'foobarbaz', 'yadayadayada' );
+        $t2->row( 'barbarbarbarbar', 'yada' );
+        print $t2->draw;
+
+        .-----------------+--------------.
+        | Foo             | Bar          |
+        +-----------------+--------------+
+        | foobarbaz       | yadayadayada |
+        | barbarbarbarbar | yada         |
+        '-----------------+--------------'
+
+DESCRIPTION
+    Simple eyecandy ASCII tables with auto-selection columns width, as seen
+    in Catalyst.
+
+METHODS
+  new(@attrs)
+    Inherited constructor from Moose. You can set following attributes:
+
+   fixed_width
+    Set fixed width for resulting table. By default it's 0, that's mean
+    "don't fix width", so width of result table will depend on input data.
+
+    Be warned, that fixed_width will include not only width of your data,
+    but also all surronding characters, like spaces across values, table
+    drawings (like '|') and hypen (if wrapping is needed).
+
+   max_width
+    Set maximum width for resulting table. By default it's 0, that's mean
+    "use default value". Default value is stored in
+    $Text::SimpleTable::AutoWidth::WIDTH_LIMIT, and can be changed at any
+    moment. Default value for WIDTH_LIMIT is 200.
+
+    Be warned, that max_width will include not only width of your data, but
+    also all surronding characters, like spaces across values, table
+    drawings (like '|') and hypen (if wrapping is needed).
+
+    NB: if you set fixed_width and max_width at same time, then you'll get
+    table with fixed width, but not wider than max_width characters.
+
+   captions
+    ArrayRef[Str] for captions in resulting table.
+
+   rows
+    ArrayRef[ArrayRef[Str]] for values in each row. You can use next method
+    to add individual rows into table.
+
+  row(@texts)
+    Add new row to table. Return $self, so you can write something like
+    this:
+
+        print Text::SimpleTable::AutoWidth
+            ->new( max_width => 55, captions => [qw/ Name Age /] )
+            ->row( 'Mother', 59 )
+            ->row( 'Dad', 58 )
+            ->row( 'me', 32 )
+            ->draw();
+
+  draw()
+    Draw table. Really, just calculate column width, and then call
+    Text::SimpleTable->draw().
+
+SEE ALSO
+    Text::SimpleTable, Moose, Catalyst
+
+AUTHOR
+    Oleg Kostyuk, "cub.uanic@gmail.com"
+
+COPYRIGHT
+    This program is free software, you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+    You can always get sources at GitHub:
+    <git://github.com/cub-uanic/text-simpletable-autowidth.git>
+

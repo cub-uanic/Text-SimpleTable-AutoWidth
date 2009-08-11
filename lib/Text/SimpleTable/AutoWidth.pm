@@ -2,7 +2,7 @@ package Text::SimpleTable::AutoWidth;
 
 use Moose;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 

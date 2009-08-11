@@ -1,7 +1,10 @@
 Tis file documents the revision history for Perl extension Text::SimpleTable::AutoWidth.
 
+0.03  2009-08-11
+        - update requirements list in META.yml and Makefile.PL
+
 0.02  2009-04-20
-		- update requirements list in META.yml
+        - update requirements list in META.yml
 
 0.01  2009-04-20
         - first release

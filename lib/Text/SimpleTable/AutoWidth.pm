@@ -2,7 +2,7 @@ package Text::SimpleTable::AutoWidth;
 
 use Moose;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -148,8 +148,7 @@ sub draw {
     my @max_width = (2) x $columns;
 
     # calculate max width of each column
-    for my $row ( ( $self->captions ? $self->captions : () ), @{ $self->rows } )
-    {
+    for my $row ( ( $self->captions ? $self->captions : () ), @{ $self->rows } ) {
         my @row_width = map { length } @$row;
         $#row_width = $columns - 1 if $#row_width >= $columns;
 
@@ -227,25 +226,43 @@ sub draw {
     return $tab->draw();
 }
 
+__PACKAGE__->meta->make_immutable();
+
 =head1 SEE ALSO
 
 L<Text::SimpleTable>, L<Moose>, L<Catalyst>
 
+=head1 SUPPORT
+
+=over 4
+
+=item * Report bugs or feature requests
+
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-SimpleTable-AutoWidth>
+
+L<http://www.assembla.com/spaces/Text-SimpleTable-AutoWidth/tickets>
+
+=item * Git repository
+
+git clone git://git.assembla.com/Text-SimpleTable-AutoWidth.git
+
+=back
+
 =head1 AUTHOR
 
-Oleg Kostyuk, C<cub.uanic@gmail.com>
+Oleg Kostyuk, C<< <cub#cpan.org> >>
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT & LICENSE
 
-This program is free software, you can redistribute it and/or modify it under
-the same terms as Perl itself.
+Copyright by Oleg Kostyuk.
 
-You can always get sources at GitHub:
-L<git://github.com/cub-uanic/text-simpletable-autowidth.git>
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1;
-
-# vi:ts=4:sw=4
+1;    # End of Text::SimpleTable::AutoWidth
 

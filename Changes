@@ -1,5 +1,9 @@
 Tis file documents the revision history for Perl extension Text::SimpleTable::AutoWidth.
 
+0.04  2010-01-05
+        - switch to Module::Install
+        - moev repository from GitHub to Assembla
+
 0.03  2009-08-11
         - update requirements list in META.yml and Makefile.PL
 

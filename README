@@ -81,13 +81,27 @@ METHODS
 SEE ALSO
     Text::SimpleTable, Moose, Catalyst
 
+SUPPORT
+    *   Report bugs or feature requests
+
+        <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-SimpleTable-Aut
+        oWidth>
+
+        <http://www.assembla.com/spaces/Text-SimpleTable-AutoWidth/tickets>
+
+    *   Git repository
+
+        git clone git://git.assembla.com/Text-SimpleTable-AutoWidth.git
+
 AUTHOR
-    Oleg Kostyuk, "cub.uanic@gmail.com"
+    Oleg Kostyuk, "<cub#cpan.org>"
 
-COPYRIGHT
-    This program is free software, you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+COPYRIGHT & LICENSE
+    Copyright by Oleg Kostyuk.
 
-    You can always get sources at GitHub:
-    <git://github.com/cub-uanic/text-simpletable-autowidth.git>
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of either: the GNU General Public License as published
+    by the Free Software Foundation; or the Artistic License.
+
+    See http://dev.perl.org/licenses/ for more information.
 

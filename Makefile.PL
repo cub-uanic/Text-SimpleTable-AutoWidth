@@ -1,16 +1,34 @@
-#!/usr/bin/env perl
 use strict;
 use warnings;
+use inc::Module::Install;
+use Module::Install::AuthorTests;
+use Module::Install::AuthorRequires;
 
-use ExtUtils::MakeMaker;
+license 'perl';
 
-# Son, when you participate in sporting events,
-# it's not whether you win or lose, it's how drunk you get.
-WriteMakefile(
-    NAME         => 'Text::SimpleTable::AutoWidth',
-    VERSION_FROM => 'lib/Text/SimpleTable/AutoWidth.pm',
-    PREREQ_PM    => {
-        'Text::SimpleTable' => 0,
-        'Moose'             => 0,
-    },
-);
+name 'Text-SimpleTable-AutoWidth';
+all_from 'lib/Text/SimpleTable/AutoWidth.pm';
+author q{Oleg Kostyuk <cub@cpan.org>};
+
+requires 'Moose'             => '0.78';
+requires 'Text::SimpleTable' => '0.03';
+requires 'namespace::autoclean';
+
+test_requires 'Test::More';
+
+author_requires 'Test::EOL' => '0.3';
+author_requires 'Test::NoTabs';
+author_requires 'Test::Pod'           => '1.14';
+author_requires 'Test::Pod::Coverage' => '1.08';
+
+resources repository => 'git://git.assembla.com/Text-SimpleTable-AutoWidth.git';
+
+tests 't/*.t';
+author_tests 't/author';
+
+if ($Module::Install::AUTHOR) {
+    system('pod2text lib/Text/SimpleTable/AutoWidth.pm > README') and die $!;
+}
+
+WriteAll;
+

@@ -2,11 +2,15 @@ package Text::SimpleTable::AutoWidth;
 
 use Moose;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 NAME
 
 Text::SimpleTable::AutoWidth - Simple eyecandy ASCII tables with auto-width selection
+
+=head1 VERSION
+
+Version is 0.05
 
 =head1 SYNOPSIS
 

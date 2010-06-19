@@ -6,7 +6,7 @@ our $VERSION = '0.04';
 
 =head1 NAME
 
-Text::SimpleTable::AutoWidth - Simple Eyecandy ASCII Tables with auto-width selection
+Text::SimpleTable::AutoWidth - Simple eyecandy ASCII tables with auto-width selection
 
 =head1 SYNOPSIS
 
@@ -228,25 +228,13 @@ sub draw {
 
 __PACKAGE__->meta->make_immutable();
 
+=head1 GIT REPOSITORY
+
+git clone git://github.com/cub-uanic/Text-SimpleTable-AutoWidth.git
+
 =head1 SEE ALSO
 
 L<Text::SimpleTable>, L<Moose>, L<Catalyst>
-
-=head1 SUPPORT
-
-=over 4
-
-=item * Report bugs or feature requests
-
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-SimpleTable-AutoWidth>
-
-L<http://www.assembla.com/spaces/Text-SimpleTable-AutoWidth/tickets>
-
-=item * Git repository
-
-git clone git://git.assembla.com/Text-SimpleTable-AutoWidth.git
-
-=back
 
 =head1 AUTHOR
 

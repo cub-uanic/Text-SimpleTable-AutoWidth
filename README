@@ -1,5 +1,5 @@
 NAME
-    Text::SimpleTable::AutoWidth - Simple Eyecandy ASCII Tables with
+    Text::SimpleTable::AutoWidth - Simple eyecandy ASCII tables with
     auto-width selection
 
 SYNOPSIS
@@ -78,20 +78,11 @@ METHODS
     Draw table. Really, just calculate column width, and then call
     Text::SimpleTable->draw().
 
+GIT REPOSITORY
+    git clone git://github.com/cub-uanic/Text-SimpleTable-AutoWidth.git
+
 SEE ALSO
     Text::SimpleTable, Moose, Catalyst
-
-SUPPORT
-    *   Report bugs or feature requests
-
-        <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-SimpleTable-Aut
-        oWidth>
-
-        <http://www.assembla.com/spaces/Text-SimpleTable-AutoWidth/tickets>
-
-    *   Git repository
-
-        git clone git://git.assembla.com/Text-SimpleTable-AutoWidth.git
 
 AUTHOR
     Oleg Kostyuk, "<cub#cpan.org>"

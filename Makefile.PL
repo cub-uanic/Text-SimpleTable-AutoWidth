@@ -21,7 +21,7 @@ author_requires 'Test::NoTabs';
 author_requires 'Test::Pod'           => '1.14';
 author_requires 'Test::Pod::Coverage' => '1.08';
 
-resources repository => 'git://git.assembla.com/Text-SimpleTable-AutoWidth.git';
+resources repository => 'git://github.com/cub-uanic/Text-SimpleTable-AutoWidth.git';
 
 tests 't/*.t';
 author_tests 't/author';

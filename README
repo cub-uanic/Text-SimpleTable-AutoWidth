@@ -3,7 +3,7 @@ NAME
     auto-width selection
 
 VERSION
-    Version is 0.05
+    Version is 0.06
 
 SYNOPSIS
         use Text::SimpleTable::AutoWidth;
@@ -36,7 +36,7 @@ DESCRIPTION
 
 METHODS
   new(@attrs)
-    Inherited constructor from Moose. You can set following attributes:
+    Inherited constructor from Moo. You can set following attributes:
 
    fixed_width
     Set fixed width for resulting table. By default it's 0, that's mean
@@ -85,7 +85,7 @@ GIT REPOSITORY
     git clone git://github.com/cub-uanic/Text-SimpleTable-AutoWidth.git
 
 SEE ALSO
-    Text::SimpleTable, Moose, Catalyst
+    Text::SimpleTable, Moo, Catalyst
 
 AUTHOR
     Oleg Kostyuk, "<cub#cpan.org>"

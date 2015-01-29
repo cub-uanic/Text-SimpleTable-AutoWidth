@@ -10,9 +10,8 @@ name 'Text-SimpleTable-AutoWidth';
 all_from 'lib/Text/SimpleTable/AutoWidth.pm';
 author q{Oleg Kostyuk <cub@cpan.org>};
 
-requires 'Moose'             => '0.78';
+requires 'Moo'               => '1.00';
 requires 'Text::SimpleTable' => '0.03';
-requires 'namespace::autoclean';
 
 test_requires 'Test::More';
 

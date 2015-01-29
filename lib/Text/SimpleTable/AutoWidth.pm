@@ -1,8 +1,8 @@
 package Text::SimpleTable::AutoWidth;
 
-use Moose;
+use Moo;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 NAME
 
@@ -10,7 +10,7 @@ Text::SimpleTable::AutoWidth - Simple eyecandy ASCII tables with auto-width sele
 
 =head1 VERSION
 
-Version is 0.05
+Version is 0.06
 
 =head1 SYNOPSIS
 
@@ -48,7 +48,7 @@ as seen in L<Catalyst>.
 
 =head2 new(@attrs)
 
-Inherited constructor from Moose.
+Inherited constructor from Moo.
 You can set following attributes:
 
 =head3 fixed_width
@@ -86,11 +86,11 @@ You can use next method to add individual rows into table.
 
 =cut
 
-has 'fixed_width' => ( is => 'rw', isa => 'Int', default => 0 );
-has 'max_width'   => ( is => 'rw', isa => 'Int', default => 0 );
+has 'fixed_width' => ( is => 'rw', default => 0 );  # isa => 'Int'
+has 'max_width'   => ( is => 'rw', default => 0 );  # isa => 'Int'
 
-has 'captions' => ( is => 'rw', isa => 'ArrayRef[Str]' );
-has 'rows'     => ( is => 'rw', isa => 'ArrayRef[ArrayRef[Str]]' );
+has 'captions' => ( is => 'rw' );                   # isa => 'ArrayRef[Str]'
+has 'rows'     => ( is => 'rw' );                   # isa => 'ArrayRef[ArrayRef[Str]]'
 
 our $WIDTH_LIMIT = 200;    # default maximum width
 
@@ -238,7 +238,7 @@ git clone git://github.com/cub-uanic/Text-SimpleTable-AutoWidth.git
 
 =head1 SEE ALSO
 
-L<Text::SimpleTable>, L<Moose>, L<Catalyst>
+L<Text::SimpleTable>, L<Moo>, L<Catalyst>
 
 =head1 AUTHOR
 

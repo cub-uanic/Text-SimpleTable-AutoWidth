@@ -20,7 +20,7 @@ use Moo;
 
 
     my $t2 = Text::SimpleTable::AutoWidth->new();
-    $t2->captions( 'Foo', 'Bar' );
+    $t2->captions( [qw/ Foo Bar /] );
     $t2->row( 'foobarbaz', 'yadayadayada' );
     $t2->row( 'barbarbarbarbar', 'yada' );
     print $t2->draw;
